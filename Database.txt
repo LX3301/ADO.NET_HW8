@@ -1,0 +1,21 @@
+CREATE DATABASE SpanishFootballChampionship;
+
+USE SpanishFootballChampionship;
+
+CREATE TABLE TeamSquad (
+    SquadID int IDENTITY(1,1) PRIMARY KEY,
+    PlayerName varchar(50) NOT NULL,
+    Country varchar(50) NOT NULL,
+    PlayerNumber int NOT NULL,
+    Position varchar(50) NOT NULL
+);
+
+CREATE TABLE Matches (
+    MatchID int IDENTITY(1,1) PRIMARY KEY,
+    Team1 varchar(50) NOT NULL,
+    Team2 varchar(50) NOT NULL,
+    Team1Goals int NOT NULL,
+    Team2Goals int NOT NULL,
+    Scorer varchar(50),
+    MatchDate date NOT NULL
+);
